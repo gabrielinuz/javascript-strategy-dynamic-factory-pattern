@@ -67,7 +67,7 @@ StrategyB.prototype.execute = function()
 
 /**
 * Constructor function
-* @extends {AbstracStrategy}
+* @extends {AbstracStrategy2}
 */
 function StrategyC() {}
 
