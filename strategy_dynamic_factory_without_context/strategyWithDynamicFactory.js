@@ -39,7 +39,7 @@ StrategyA.prototype = new AbstracStrategy;
 */
 StrategyA.prototype.execute = function()
 {
-	console.log('Called ConcreteStrategyA execute method.');
+    console.log('Called ConcreteStrategyA execute method.');
 }
 
 /***************************************************************************************************/
@@ -60,7 +60,7 @@ StrategyB.prototype = new AbstracStrategy;
 */
 StrategyB.prototype.execute = function()
 {
-	console.log('Called ConcreteStrategyB execute method.');
+    console.log('Called ConcreteStrategyB execute method.');
 }
 
 /***************************************************************************************************/
@@ -81,7 +81,7 @@ StrategyC.prototype = new AbstracStrategy2;
 */
 StrategyC.prototype.execute2 = function()
 {
-	console.log('Called ConcreteStrategyC execute method.');
+    console.log('Called ConcreteStrategyC execute method.');
 }
 
 /***************************************************************************************************/
@@ -93,19 +93,19 @@ function DynamicStrategyFactory(){}
 
 DynamicStrategyFactory.prototype.create = function(id)
 {
-	var strategyName = "Strategy" + id;
-	var strategy;
-	try
-	{
-		strategy = eval('new ' + strategyName + '()');
-	}
-	catch(err) 
-	{
-    	console.log('Null Strategy: '+err.message);
-	}
+    var strategyName = "Strategy" + id;
+    var strategy;
+    try
+    {
+        strategy = eval('new ' + strategyName + '()');
+    }
+    catch(err) 
+    {
+        console.log('Null Strategy: '+err.message);
+    }
 
-	if( strategy instanceof AbstracStrategy ) strategy.execute();
-	else console.log( strategyName + ' not is a prototype of AbstracStrategy.' );
+    if( strategy instanceof AbstracStrategy ) strategy.execute();
+    else console.log( strategyName + ' not is a prototype of AbstracStrategy.' );
 }
 
 /***************************************************************************************************/
