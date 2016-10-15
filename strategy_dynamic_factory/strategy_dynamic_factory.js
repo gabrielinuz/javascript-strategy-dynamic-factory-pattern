@@ -120,8 +120,15 @@ DynamicStrategyFactory.prototype.create = function(id)
         console.log('Null Strategy: '+err.message);
     }
 
-    if( strategy instanceof AbstracStrategy ){ var context = new Context(strategy); context.update(); }
-    else { console.log( strategyName + ' not is a prototype of AbstracStrategy.' ); }
+    if( strategy instanceof AbstracStrategy )
+    { 
+        var context = new Context(strategy); 
+        context.update(); 
+    }
+    else 
+    { 
+        console.log( strategyName + ' not is a prototype of AbstracStrategy.' ); 
+    }
 };
 
 /***************************************************************************************************/
